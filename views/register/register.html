@@ -1,0 +1,194 @@
+<!-- BEGIN: REGISTER -->
+
+
+	<script>
+
+$(document).ready(function() {
+    $('a#login-window').click(function() {
+        //lấy giá trị thuộc tính href - chính là phần tử "#login-box"
+        var loginBox = $(this).attr('href');
+ 
+        //cho hiện hộp đăng nhập trong 300ms
+        $(loginBox).fadeIn(300);
+ 
+        // thêm phần tử id="over" vào sau body
+        $('body').append('<div id="over">');
+        $('#over').fadeIn(300);
+ 
+        return false;
+ });
+ 
+ // khi click đóng hộp thoại
+ $(document).on('click', "a.close, #over", function() {
+       $('#over, .login').fadeOut(300 , function() {
+           $('#over').remove();
+       });
+      return false;
+ });
+});
+</script>
+
+
+
+</head>
+<body>
+	
+
+	<div class="jumbotron">
+		<div class="container">
+
+
+<!-- login -->
+					<div class="col-sm-offset-2 col-sm-8">
+			<div class="login" id="login-box" style="background-image: url('../../img/login/hinh-nen-hoa-dao.jpg');">Login
+ 
+				 <!-- <a class="close" href="#"><img class="img-close" title="Close Window" alt="Close" src="close.png" /></a> -->
+				
+					<form class="login-content" method="POST">
+						<div class="col-sm-7">
+					<label for="username">User Name:</label>
+						<div class=" input-group col-sm-11">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+							<input id="username"  class="form-control" type="text" autocomplete="on" name="username" placeholder="Username" value="" />
+						</div>
+						
+					<br><br>
+
+					<label for="password">Password:</label>
+						<div class="input-group col-sm-11">
+						
+							<span class="input-group-addon"><i class="fa fa-key" style="font-size:16px"></i></span>
+							<input id="password" class="form-control" type="password" name="password" placeholder="Password" value="" />
+					
+						</div>
+					
+					<br>
+					<div class="col-sm-6">
+						<a class="forgot" href="#"><span style="font-size: 12px">Forgot password?</span></a>
+					</div>
+					<div class="col-sm-6">
+						<span style="font-size: 12px">New User?</span>
+						<a class="register" href="register.html"><span style="font-size: 12px">Register here</span></a>
+					</div>
+				</div>
+				
+					<br>
+					<div class="col-sm-5">
+						<button class="login_button col-sm-12" class="button submit-button" type="button">Đăng nhập</button>
+
+					<br><br><br><br>
+					<div>
+						Or Login with: 
+						<a href="#"><img src="../../img/slide header/Facebook-logo200.png" width="30" height="30"></a>
+						<a href="#"><img src="../../img/slide header/Google-Plus-Icon.png" width="30" height="30"></a>
+						<a href="#"><img src="../../img/slide header/twitter.png" width="30" height="30"></a>		
+					</div>
+					</div>
+					
+				</form>
+			</div>
+		</div>
+		
+
+
+
+
+
+
+
+
+
+
+			<div class="col-sm-offset-2 col-sm-8">
+				<div class="row">
+					<div class="col-sm-6"style="font-size: 18px " >
+						<span >Tạo tài khoản OceanGate</span>
+					</div>
+					<div class="col-sm-6" style="font-size: 18px ">
+						<span>Bạn đã là thành viên?</span>
+						Đăng nhập<a id="login-window" href="#login-box"> tại đây</a> 
+
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+
+			
+				
+				<form method="POST" >
+					<div class="col-sm-12" style="border: 1px solid black; background-color: white; height: 450px;">
+					<div class="col-sm-6" style="margin-top: 20px">
+						<div class="form-group">
+					      	<label for="pwd">Số điện thoại:</label>
+							  <input type="text" class="form-control" id="phone" placeholder="Nhập số điện thoại của bạn" name="txtPhone" >
+							  <span class="text-danger">{erro_phone}</span>
+					    </div>
+					
+						<div class="form-group">
+	      					<label for="pwd">Password:</label>
+							  <input type="password" class="form-control" id="pwd" placeholder="Tối thiểu 6 kí tự bao gồm cả chữ và số" name="txtPwd">
+							  <span class="text-danger">{erro_password}</span>
+						</div>
+
+						<div class="form-group">
+							<label for="pwd">Re-Password:</label>
+							<input type="password" class="form-control" id="pwd" placeholder="Tối thiểu 6 kí tự bao gồm cả chữ và số" name="re_password">
+							<span class="text-danger">{erro_re_password}</span>
+					  </div>
+						
+						<div class="form-group">
+							<label for="gmail">Gmail:</label>
+							<input type="text" class="form-control" id="gmail" placeholder="Enter gmail" name="txtMail">
+							<span class="text-danger">{erro_email}</span>
+					  </div>
+						
+						<div class="form-group" style="margin-left: -15px">
+							<div class=" col-sm-8">
+								<label for="">Ngày sinh:</label>
+								<input type="date"  class="form-control" name="txtDate">
+								<span class="text-danger">{erro_date}</span>  
+							</div>
+			      			
+							<div class=" col-sm-4" >
+								<label for="sel1">Giới tính:</label>
+							    <select class="form-control" id="sel1" name="gender">
+							        <option value="Male">Male</option>
+							        <option value="Female">Female</option>
+							    </select>		
+			    				
+							</div>
+			      		</div>			
+					</div>
+
+				
+					<div class="col-sm-6"style="margin-top: 20px">
+						<div class="form-group">
+					      	<label for="name">Tên:</label>
+							  <input type="text" class="form-control" id="name" placeholder="Họ Tên" name="txtName">
+							  <span class="text-danger">{erro_name}</span>
+						</div>
+						<div class="form-group">
+							<label for="address">Address:</label>
+							<input type="text" class="form-control" id="address" placeholder="Address" name="txtAddress">
+							<span class="text-danger">{erro_address}</span>
+					  </div>
+					    <div class="checkbox">
+					      <label><input type="checkbox" value="">Tôi chấp nhận ...</label>
+					    </div>
+					    
+						<input type="submit" class="btn btn-primary btn-lg col-sm-12" value="Submit">	
+					    
+					</div>		
+					</div>
+				</form>	
+			
+		</div>
+	</div>
+</div>
+<!-- END: REGISTER -->

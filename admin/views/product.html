@@ -1,0 +1,120 @@
+<!-- BEGIN: LIST -->
+<script>
+   function onDelete(_id){
+      if(confirm("Are you sure delete the info?")){
+         window.location.href="?a=deletepro&id="+_id;
+      }
+   }
+ 
+   function checkAll(){
+      var ck = document.getElementsByName('ck[]');
+      var mck= document.getElementById('mck');
+      if(ck.length>0){
+         if(mck.checked===true){
+            for(i=0; i<ck.length;i++){
+               ck[i].checked=true;
+            }
+         }else{
+            for(i=0; i<ck.length;i++){
+               ck[i].checked=false;
+            }
+         }
+      }
+   }
+   $(document).ready(function(){
+      $('#btnDelAll').click(function(){
+         if(confirm('Are you sure to delete these records?')) return true;
+         else return false;
+      })
+   })
+   function check(a){
+      var ckAll = $("#mck")[0];
+      if (a === false) ckAll.checked = false;
+   }
+ </script>
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">
+     <a href="index.html">Dashboard</a>
+  </li>
+  <li class="breadcrumb-item active">Danh Muc</li>
+</ol>
+<h1>Chi tiet san pham
+   <a href="?a=addproduct" class="btn btn-info">Them moi</a>
+</h1>
+<hr>
+<div class="card mb-3">
+  <div class="card-header">
+     <i class="fas fa-table"></i>
+     Data Product
+  </div>
+  <div class="card-body">
+     <div class="table-responsive">
+           <div class="row">
+              <div class="col-sm-12">
+                   <form method="POST" name="frmListing">
+                         <input type="submit" value="Delete" class="delAll" name="btnDel" id="btnDelAll">
+                 <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                    <thead>
+                       <tr role="row">
+                          <th>STT</th>
+                          <th>Name</th>
+                          <th>Thunbar</th>
+                          <th>Info</th>
+                          <th>Action</th>
+                          <th align="center">
+                               <input type='checkbox' value='' name="masterCheck" id="mck" onclick='checkAll()'/>
+                         </th>
+                       </tr>
+                    </thead>
+                    <tbody>
+                       <!-- BEGIN: LP -->
+                       <tr role="row" class="odd">
+                          <td class="sorting_1">{LP.STT}</td>
+                          <td>{LP.name}</td>
+                          <td>
+                             <img src="{LP.thunbar}" alt="" width="80px" height="80px">
+                          </td>
+                          <td>
+                             <ul>
+                                <li>Price:{LP.price}</li>
+                                <li>Number:{LP.number}</li>
+                             </ul>
+                          </td>
+                          <td>
+                             <a class="btn btn-xs btn-info" href="?a=editpro&id={LP.id}"><i class="fa fa-edit"></i>Edit</a>
+                             <a class="btn btn-xs btn-danger" href="javascript:void(0)" onclick='onDelete({LP.id})'><i class="fa fa-times"></i>Delete</a>
+                          </td>
+                          <td align="center"><input type='checkbox' onclick="check(this.checked)" value='{LP.id}' name="ck[]"/></td>
+                       </tr>
+                       <!-- END: LP -->
+                    </tbody>
+                    <tfoot>
+                       
+                    </tfoot>
+                 </table>
+                 <div class="float-right">
+                  <nav aria-label="Page navigation example" pull-right>
+                     <ul class="pagination">
+                        <li class="page-item">
+                           <a class="page-link" href="#" aria-label="Previous">
+                              <span aria-hidden="true">&laquo;</span>
+                           </a>
+                        </li>
+                        {pagers}
+                        <li class="page-item">
+                           <a href="#" class="page-link" aria-label="Next">
+                              <span aria-hidden="true">&raquo;</span>
+                           </a>
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</div>
+</div>
+</form>
+<!-- END: LIST -->

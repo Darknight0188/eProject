@@ -1,0 +1,83 @@
+<!-- BEGIN: BILL -->
+     <ol class="breadcrumb">
+       <li class="breadcrumb-item">
+          <a href="?a=cart">Dashboard</a>
+       </li>
+       <li class="breadcrumb-item active">Bill</li>
+     </ol>
+     <h1>Chi tiet hoa don
+        
+     </h1>
+     <hr>
+     <div class="card mb-3">
+        <!-- BEGIN: NA -->
+       <div class="card-header">
+          <i class="fas fa-user"></i>
+          {NA.username} - Bill:{NA.id}
+       </div>
+       <!-- END: NA -->
+       <div class="card-body">
+          <div class="table-responsive">
+                <div class="row">
+                   <div class="col-sm-12">
+                        <form method="POST" name="frmListing">
+                              
+                      <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                         <thead>
+                            <tr role="row">
+                               <th>Product</th>
+                               <th>Price</th>
+                               <th>Quantity</th>
+                               <th>total</th>
+                            </tr>
+                         </thead>
+                         <tbody>
+                            <!-- BEGIN: LP -->
+                            <tr role="row" class="odd">
+                               
+                               
+                               <td>
+                                  {LP.product_name}
+                               </td>
+                               <td>Price:{LP.price}</td>
+                               <td>
+                                  
+                                     
+                                     Number:{LP.quantity}
+                                 
+                               </td>
+                               <td>{LP.total}</td>
+                               
+                            </tr>
+                            <!-- END: LP -->
+                         </tbody>
+                         <tfoot>
+                            
+                         </tfoot>
+                      </table>
+                      <div class="float-right">
+                       <nav aria-label="Page navigation example" pull-right>
+                          <ul class="pagination">
+                             <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                   <span aria-hidden="true">&laquo;</span>
+                                </a>
+                             </li>
+                             {pagers}
+                             <li class="page-item">
+                                <a href="#" class="page-link" aria-label="Next">
+                                   <span aria-hidden="true">&raquo;</span>
+                                </a>
+                             </li>
+                          </ul>
+                       </nav>
+                    </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+     </div>
+     </div>
+     </form>
+     <!-- END: BILL -->

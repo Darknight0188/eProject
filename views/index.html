@@ -1,0 +1,331 @@
+<!-- BEGIN: LAYOUT -->
+<html>
+<head>
+	<title> {title}</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- add link icon -->
+    
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    
+<link rel="stylesheet" type="text/css" href="{baseUrl}css/owl.carousel.css">
+<script src="{baseUrl}js/owl.carousel.js"></script>
+
+	 <link rel="stylesheet" type="text/css" href="{baseUrl}css/style.css">
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+	 <!-- jQuery exzoom: Product Carousel Example -->
+ 	<script src="js/jsViews/jquery.exzoom.js"></script>
+ 	<link rel="stylesheet" type="text/css" href="css/jquery.exzoom.css">
+ 	<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="js/jsViews/jquery.exzoom.js"></script>
+    <link href="css/jquery.exzoom.css" rel="stylesheet" type="text/css"/>
+
+
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#exzoom {
+			width: 500px;
+			/*height: 300px;*/
+		}
+		.container { margin-top: 0px ; max-width: 960px; }
+		.hidden { display: none; }
+		
+	
+		</style> 
+</head>
+<body>
+
+	<thead>
+
+		<div class="container-fluid" id="thead_top_nav" >
+			<marquee>
+				<div class="col-sm-2" id="thead_top_nav_infor">	
+					<span><i class="fa fa-search"></i>Hotline: 0973603391</span>
+				</div>
+				<div class="col-sm-3" id="thead_top_nav_infor" >
+					<span><i class="fa fa-search"></i>Email: kiennguyen16998@gmail.com</span>
+				</div>
+				<div class="col-sm-7" id="thead_top_nav_infor" >
+					<span><i class="fa fa-search"></i>Địa chỉ: Hồ Hoàn Kiếm - Quận Hoàn Kiếm - Hà Nội - Việt Nam</span>
+				</div>
+			</marquee>
+		</div>
+
+
+
+
+		<div class="container-fluid" id="thead_mid_nav" >
+			<div class="row" id="thead_mid_nav_option" >
+				<div class="col-sm-offset-1 col-sm-3">
+					<img src=" img/thead_logo/OceanGate.png" width=200" height="80">
+				</div>
+				<div class="col-sm-5" style="margin-top: 20px;">
+					    <form method="post">
+						    	<div class="row">
+							    	<div class="input-group col-sm-10" >
+							    		<input type="text" class="form-control" id="search" placeholder="Bạn cần gì hôm  nay?" name="txtSearch">
+								      	<span class="input-group-btn" >
+								      		<button type="submit" class="btn btn-default ">
+								      			<i class="fa fa-search"></i> Tìm Kiếm
+								      		</button>
+								      	</span>							      		
+						    		</div>
+						    	</div>
+					    </form>     
+				</div>
+				<div class="col-sm-3" style="margin-top: 20px;">
+					<a class="" href="?m=cart&a=cart"><i class='fas fa-cart-plus' style='font-size:30px'> Giỏ Hàng</i></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid" id="thead_bot_nav">
+			<div class="container" id="thead_bot_nav_option">
+				<div class="col-sm-8" >
+					<a class="active" href="?m=home&a=home"><i class='fas fa-home' style='font-size:15px;color:white'></i>Home</a>
+					<a href="?m=product&a=product">Products</a>
+					<a href="?m=home&a=support">Support</a>
+					<a href="?m=home&a=wheretobuy">Where To Buy</a>
+					<a href="?m=home&a=aboutus">About Us</a>
+				</div>
+				<div class="col-sm-4">
+					<a  href="?m=login&a=login" {login}>Login</a>
+					<a href="#" {name_users}>{users}</a>
+					<a href="?m=product&a=register" {register}><i class='fas fa-home' style='font-size:15px;color:white' ></i>Register</a>
+					<a href="logout.php" {logout}>Logout</a>
+				</div>
+			</div>		 
+		</div>			
+	</thead>
+
+	<tbody>
+		
+<!-- login -->
+<div class="col-sm-offset-2 col-sm-8">
+	<div class="login" id="login-box" style="background-image: url('../../img/login/hinh-nen-hoa-dao.jpg');">Login
+
+		 <!-- <a class="close" href="#"><img class="img-close" title="Close Window" alt="Close" src="close.png" /></a> -->
+		
+			<form class="login-content" method="POST">
+				<div class="col-sm-7">
+			<label for="username">Email:</label>
+				<div class=" input-group col-sm-11">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+					<input id="username"  class="form-control" type="text" autocomplete="on" name="mail" placeholder="Username" value="" />
+					<span class="text-danger">{error_user}</span>
+				</div>
+				
+			<br><br>
+
+			<label for="password">Password:</label>
+				<div class="input-group col-sm-11">
+				
+					<span class="input-group-addon"><i class="fa fa-key" style="font-size:16px"></i></span>
+					<input id="password" class="form-control" type="password" name="user_password" placeholder="Password" value="" />
+					<span class="text-danger">{error_password}</span>
+				</div>
+			
+			<br>
+			<div class="col-sm-6">
+				<a class="forgot" href="#"><span style="font-size: 12px">Forgot password?</span></a>
+			</div>
+			<div class="col-sm-6">
+				<span style="font-size: 12px">New User?</span>
+				<a class="register" href="register.html"><span style="font-size: 12px">Register here</span></a>
+			</div>
+		</div>
+		
+			<br>
+			<div class="col-sm-5">
+				<button class="login_button col-sm-12" class="button submit-button" type="submit">Đăng nhập</button>
+
+			<br><br><br><br>
+			<div>
+				Or Login with: 
+				<a href="#"><img src="../../img/slide header/Facebook-logo200.png" width="30" height="30"></a>
+				<a href="#"><img src="../../img/slide header/Google-Plus-Icon.png" width="30" height="30"></a>
+				<a href="#"><img src="../../img/slide header/twitter.png" width="30" height="30"></a>		
+			</div>
+			</div>
+			
+		</form>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+		{content}	
+		
+
+</tbody>
+
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+	<tfoot>
+
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+<style type="text/css">
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+
+
+		<button onclick="topFunction()" id="myBtn" title="Go to top">
+			<i class='fas fa-angle-up' style='font-size:24px'></i>
+
+		</button>
+
+
+
+
+		<button class="open-button" onclick="openForm()">
+			<i class='fab fa-facebook-messenger' style='font-size:40px'></i>
+		</button>
+
+		<div class="chat-popup" id="myForm">
+		  <form  class="form-container">
+		    <h3>Chat with OceanGate</h3>
+
+		    <label for="msg"><b>Message</b></label>
+		    <textarea placeholder="Xin chào! Chúng tôi có thể giúp gì cho bạn..." name="msg" required></textarea>
+
+		    <button type="submit" class="btn">Send</button>
+		    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+		  </form>
+		</div>
+
+
+		<div class="container-fluid" id="tfoot" style="background-color: #4F4F4F; color: white;">
+			<div class="container" id="tfoot_contain">
+				<div class="col-sm-3">
+					<p><h4>LIÊN HỆ VỚI OceanGate</h4></a></p>
+					<p><a href="#">Thứ 2 đến CN: 9h - 18h (Hotline), 7h - 22h (chat trực tuyến)</a></p>
+					<p><a href="#">Trung tâm hỗ trợ</a></p>
+					<p><a href="#">Hướng dẫn đặt hàng</a></p>
+					<p><a href="#">Chính sách hàng nhập khẩu</a></p>
+					<p><a href="#">Hướng dẫn đổi trả hàng</a></p>
+
+				</div>
+				<div class="col-sm-3">
+					<p><h4>OceanGate VIỆT NAM</h4></a></p>
+					<p><a href="#">Về OceanGate Việt Nam</a></p>
+					<p><a href="#">Tuyển dụng</a></p>
+					<p><a href="#">Chính sách bảo mật</a></p>
+					<p><a href="#">Điều khoản mua bán hàng hóa</a></p>
+					
+				</div>
+
+				<div class="col-sm-3" id="tfoot_column_3rd">
+					<p><h4>KẾT NỐI VỚI CHÚNG TÔI</h4></a></p>
+						<a href="#"><img src="{baseUrl}img/slide header/Facebook-logo200.png" width="30" height="30"></a>
+						<a href="#"><img src="{baseUrl}img/slide header/zalo.jpg" width="30" height="30"></a>	
+						<a href="#"><img src="{baseUrl}img/slide header/youtube.jpg" width="30" height="30"></a>		
+						<a href="#"><img src="{baseUrl}img/slide header/instagram.jpg" width="30" height="30"></a>
+						<a href="#"><img src="{baseUrl}img/slide header/twitter.png" width="30" height="30"></a>					
+					
+				</div>
+				<div class="col-sm-3">
+					<p><h4 style="text-align: center;">CHỨNG NHẬN</h4></a></p>
+					<div class="col-sm-5">						
+						<p><a href="#"><img src="{baseUrl}img/slide header/chứng nhận 1.png" width="70" height="70"></a></p>
+						
+					</div>
+					<div class="col-sm-7">
+						<p><img src="{baseUrl}img/slide header/dathongbao.png" width="120" height="40"></p>
+						<p><img src="{baseUrl}img/slide header/dadangky.png" width="120" height="40"></p>
+						<p><img src="{baseUrl}img/slide header/camket.png" width="120" height="40"></p>
+					</div>
+				
+				</div>
+			</div>
+			<div class="container">
+				<div class="col-sm-3">
+					<h4>CÁCH THỨC THANH TOÁN: </h4>
+				</div>
+				<div class="col-sm-8" id="tfoot_column_3rd">
+					<a href="#"><img src="{baseUrl}img/slide header/visa1.png" width="70" height="40"></a>
+					<a href="#"><img src="{baseUrl}img/slide header/mastercard.png" width="70" height="40"></a>
+					<a href="#"><img src="{baseUrl}img/slide header/jcb.png" width="80" height="40"></a>
+					<a href="#"><img src="{baseUrl}img/slide header/PayPal.png" width="80" height="40"></a>
+					
+				</div>
+			</div>		
+		</div>
+	</tfoot>
+
+</body>
+</html>
+
+<!-- END: LAYOUT -->

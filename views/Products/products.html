@@ -1,0 +1,225 @@
+<!-- BEGIN: PRODUCT -->
+<div class=" jumbotron ">
+	<div class="container"> 
+   <!--  Demos -->
+<section id="demos">
+  <div class="row">
+	<div class="large-12 columns">
+	  <script>
+		$(document).ready(function() {
+		  var owl = $('.owl-carousel');
+		  owl.owlCarousel({
+			loop: true,
+			margin: 10,
+			navRewind: false,
+			responsive: {
+			  0: {
+				items: 1
+			  },
+			  1000: {
+				items: 2
+			  },
+			  2000: {
+				items: 3
+			  }
+			}
+		  })
+		})
+	  </script>
+	</div>
+  </div>
+</section>
+
+
+		 
+		<!-- <div class="col-sm-3" >
+		<div style="border: 1px solid red;background-color: white">
+			  <p>BỘ LỌC</p>
+			  <p>Giúp thanh lọc sản phẩm tìm kiếm</p>       
+		</div>
+		<div style="border: 1px solid blue;background-color: white">
+			  <p>Thương Hiệu</p>
+			  <div class="col-sm-12">
+					<div class="input-group">
+					  <input type="text" class="form-control" id="search" placeholder="Tìm thương hiệu?" name="txtSearch">
+					   <span class="input-group-btn">
+							<button class="btn btn-default ">
+							   <i class="fa fa-search"></i>
+							 </button>
+					   </span>	
+					</div>
+			</div>
+		<div class="scrollbar col-sm-12" id="scrollbar">
+			<div class=" force-overflow ">
+				  <ul>
+					<li class="" style="cursor: pointer;">
+						  <label for="ck_usb" style="display: block;">
+							<input type="checkbox" name="" id="ck_usb">usb
+						  </label>
+					</li>
+					<li class="" style="cursor: pointer;">
+						  <label for="ck_usb1" style="display: block;">
+							<input type="checkbox" name="" id="ck_usb1"> usb
+						  </label>
+					</li>
+					<li class="" style="cursor: pointer;">
+						  <label for="ck_usb1" style="display: block;">
+							<input type="checkbox" name="" id="ck_usb1"> usb
+						  </label>
+					</li>
+					<li class="" style="cursor: pointer;">
+						  <label for="ck_usb1" style="display: block;">
+							<input type="checkbox" name="" id="ck_usb1"> usb
+						  </label>
+					</li>
+					<li class="" style="cursor: pointer;">
+						  <label for="ck_usb1" style="display: block;">
+							<input type="checkbox" name="" id="ck_usb1"> usb
+						  </label>
+					</li>
+					<li class="" style="cursor: pointer;">
+						  <label for="ck_usb1" style="display: block;">
+							<input type="checkbox" name="" id="ck_usb1"> usb
+						  </label>
+					</li>
+				  </ul>
+			</div>
+	  </div> -->
+
+
+<!--           <p>Giá sản phẩm</p>
+
+	  <div class="scrollbar col-sm-12" id="scrollbar">
+		<div class=" force-overflow ">
+		  <ul>
+			<li class="" style="cursor: pointer;">
+			  <label for="ck_usb" style="display: block;">
+				<input type="checkbox" name="" id="ck_usb">
+				
+				100.000đ - 200.000đ
+			  </label>
+			</li>
+			<li class="" style="cursor: pointer;">
+			  <label for="ck_usb1" style="display: block;">
+				<input type="checkbox" name="" id="ck_usb1">
+				
+				100.000đ - 200.000đ
+			  </label>
+			</li>
+			<li class="" style="cursor: pointer;">
+			  <label for="ck_usb2" style="display: block;">
+				<input type="checkbox" name="" id="ck_usb2">
+				
+				100.000đ - 200.000đ
+			  </label>
+			</li>
+			<li class="" style="cursor: pointer;">
+			  <label for="ck_usb3" style="display: block;">
+				<input type="checkbox" name="" id="ck_usb3">
+				
+				100.000đ - 200.000đ
+			  </label>
+			</li>
+			<li class="" style="cursor: pointer;">
+			  <label for="ck_usb4" style="display: block;">
+				<input type="checkbox" name="" id="ck_usb4">
+				
+				100.000đ - 200.000đ
+			  </label>
+			</li>
+			<li class="" style="cursor: pointer;">
+			  <label for="ck_usb5" style="display: block;">
+				<input type="checkbox" name="" id="ck_usb5">
+				
+				100.000đ - 200.000đ
+			  </label>
+			</li>
+			<li class="" style="cursor: pointer;">
+			  <label for="ck_usb6" style="display: block;">
+				<input type="checkbox" name="" id="ck_usb6">
+				
+				100.000đ - 200.000đ
+			  </label>
+			</li>
+		  </ul>
+
+		</div>
+	  </div>.
+	</div>
+  </div> -->
+
+ <div class="col-sm-12">
+	 <div class="well well-sm "> 
+		 <div class=" text-right">
+			 <strong>Chọn kiểu hiển thị:</strong> 
+			  <div class="btn-group"> 
+				  <a href="" id="list" class="btn btn-default btn-sm">
+					  <span class="glyphicon glyphicon-th-list"></span>Dạng danh sách
+				  </a> 
+				  <a href="" id="grid" class="btn btn-default btn-sm">
+					  <span class="glyphicon glyphicon-th"></span>Dạng lưới
+				  </a> 
+			  </div> 
+		 </div>	
+	 </div> 
+	 <div id="products" class="row list-group"> 
+		 <!-- 
+		  <div class="item  col-sm-3">
+			   <div class="thumbnail"> 
+				   <img class="group list-group-image" src="{LS.thunbar}" alt="Sản phẩm 1" width="300"> 
+				   <div class="caption"> 
+				<h4 class="group inner list-group-item-heading"> Sản phẩm {LS.STT}</h4> 
+				 <p class="group inner list-group-item-text"> {LS.name} </p> 
+					 <div class="row"> 
+						  <div class="col-xs-12 col-md-6"> 
+							   <p class="lead">{LS.price}</p> 
+						  </div> 
+						  <div class="col-xs-12 col-md-6"> 
+							  <a class="btn btn-success" href="?m=detailPro&a=details">Chi tiết</a> 
+						  </div> 
+					 </div> 
+				</div> 
+			   </div> 
+		  </div> 
+		-->
+		<!-- BEGIN: LS -->
+		<div id="zoom" class="col-sm-3">
+			<a href="?m=detailPro&a=details&id={LS.id}">
+				<img src="{LS.thunbar}" width="200" height="200">
+				<div style="text-align: center;">
+					<span>{LS.name}</span><br>
+					<span>{LS.sale}</span>
+					<span style=" text-decoration: line-through; font-size: 11px" {show}>{LS.price}</span><br>
+				</div><br>
+			</a>
+			<a class="btn btn-primary col-sm-offset-4" href="?m=cart&a=cart&id={LS.id}" role="button">Buy</a>
+		</div>
+		<!-- END: LS -->
+		  </div> 
+		  <div class="float-right">
+				<nav aria-label="Page navigation example" pull-right>
+				   <ul class="pagination">
+					  <li class="page-item">
+						 <a class="page-link" href="#" aria-label="Previous">
+							<span aria-hidden="true">&laquo;</span>
+						 </a>
+					  </li>
+					  {pagers}
+					  <li class="page-item">
+						 <a href="#" class="page-link" aria-label="Next">
+							<span aria-hidden="true">&raquo;</span>
+						 </a>
+					  </li>
+				   </ul>
+				</nav>
+			 </div>
+	 </div> 
+</div> 
+</div> 
+</div> 
+
+<link rel="stylesheet" href="css/owl.carousel.min.css">
+<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+<!-- END: PRODUCT -->
+
